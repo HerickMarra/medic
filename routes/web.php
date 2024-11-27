@@ -12,5 +12,5 @@ Route::get('/', function () {
 Route::prefix('user')->group(function () {
     
     Route::get('/', [UserController::class, 'index']);
-
+    Route::get('/illness', [UserController::class, 'getIllness']);
 });

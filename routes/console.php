@@ -14,10 +14,10 @@ Artisan::command('inspire', function () {
 
     $gpt = NEW ChatGPTService();
     $triagem = $gpt->preDiagnose(
-        ['Nuseas', 'Manchas vermelhas no cropo', 'desmaio'], 
-        38 ,
+        ['Dor aguda nas costas', 'Mão e pés inchados'], 
+        23 ,
         "Homem",
-        "Thalita");
+        "Vitorio");
         
 
     $tri= json_decode($triagem);
@@ -27,7 +27,7 @@ Artisan::command('inspire', function () {
         // dd($triagem);
     }
 
-
+    dd($tri);
 
     UserService::triagemUser($tri);
 

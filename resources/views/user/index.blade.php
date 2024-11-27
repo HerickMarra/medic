@@ -10,8 +10,13 @@
 </head>
 <body>
     <x-area-mobile>
-        <h1 style="color: #fff;">Olá     </h1>
+
+
+        <x-layout.banner-inicial />
+        <x-select-function />
     </x-area-mobile>
 
 </body>
+
+<script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
 </html>
