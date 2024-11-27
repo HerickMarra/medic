@@ -1,5 +1,8 @@
 <div class="x-select-function" id="x-select-function">
       
+    <div class="x-select-function-banner">
+
+    </div>
     <div class="x-select-function-sintomas">
         <div class="x-select-function-sintomas-card">Febre</div>
         <div class="x-select-function-sintomas-card">Dor de cabeça</div>

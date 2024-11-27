@@ -116,3 +116,16 @@ body{
     padding: 3px 7px;
     border: 1px solid rgb(175, 175, 175);
 }
+
+
+.x-select-function-banner{
+    background-image: url(/images/med-card.png);
+    width: 90%;
+    height: 200px;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 15px auto;
+    border-radius: 15px;;
+}
