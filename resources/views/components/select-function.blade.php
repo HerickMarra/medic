@@ -2,7 +2,6 @@
       
     <div class="x-select-function-banner">
     </div>
-
     <section class="x-select-function-area">
         <div class="x-select-function-banner-triagem"></div>
         <div class="x-select-function-banner-sintomas"></div>
