@@ -129,3 +129,19 @@ body{
     margin: 15px auto;
     border-radius: 15px;;
 }
+
+
+.x-select-function-banner-triagem{
+    width: 45%;
+    aspect-ratio: 1; /* Garante que a altura seja igual à largura */
+    background-image: url(/images/triagem-card.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px;
+    border-radius: 7px;
+}
+
+.x-select-function-area{
+    display: flex;
+}

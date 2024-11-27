@@ -1,17 +1,18 @@
 <div class="x-select-function" id="x-select-function">
       
     <div class="x-select-function-banner">
-
-    </div>
-    <div class="x-select-function-sintomas">
-        <div class="x-select-function-sintomas-card">Febre</div>
-        <div class="x-select-function-sintomas-card">Dor de cabeça</div>
-        <div class="x-select-function-sintomas-card"> Gripe</div>
     </div>
 
-    <div class="x-select-function-desc" >
+    <section class="x-select-function-area">
+        <div class="x-select-function-banner-triagem"></div>
+        <div class="x-select-function-banner-triagem"></div>
+    </section>
+
+    
+
+    {{-- <div class="x-select-function-desc" >
         <div class="x-select-function-desc-btn">Descrever sintomas (por texto)</div>
-    </div>
+    </div> --}}
 </div>
 
 
