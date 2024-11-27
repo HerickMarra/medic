@@ -61,6 +61,40 @@ body{
     position: fixed;
     background-color: #fff;
     top: 1500px;
-    transition: all 0.5s;
+    transition: all 0.3s;
+    overflow: auto;;
 }
 
+
+
+.x-select-function-sec-1{
+    width: 70%;
+    height: 300px;
+    background-color: red;
+    margin: 20px auto;
+    display: flex;
+    border-radius: 30px;
+}
+
+
+
+.x-select-function-desc{
+    position: fixed;
+    bottom: 50px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;;
+    margin: 0 auto;
+    display: none;
+}
+
+
+.x-select-function-desc-btn{
+    width: 70%;
+    background: linear-gradient(135deg, #B34053, #592589);
+    text-align: center;
+    color: #fff;
+    padding: 20px 7px;
+    border-radius: 7px;
+}

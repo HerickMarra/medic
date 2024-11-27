@@ -14,10 +14,10 @@ Artisan::command('inspire', function () {
 
     $gpt = NEW ChatGPTService();
     $triagem = $gpt->preDiagnose(
-        ['Dor aguda nas costas', 'Mão e pés inchados'], 
-        23 ,
-        "Homem",
-        "Vitorio");
+        ['Tontura', 'falta de ar','taquicardia'], 
+        42 ,
+        "Mulher",
+        "elaine");
         
 
     $tri= json_decode($triagem);
