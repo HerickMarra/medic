@@ -98,3 +98,21 @@ body{
     padding: 20px 7px;
     border-radius: 7px;
 }
+
+
+
+.x-select-function-sintomas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.x-select-function-sintomas-card{
+    font-weight: 400;
+    margin: 10px;
+    border-radius: 7px;
+    background-size: cover;
+    padding: 3px 7px;
+    border: 1px solid rgb(175, 175, 175);
+}
