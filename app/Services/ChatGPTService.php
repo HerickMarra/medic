@@ -60,7 +60,7 @@ class ChatGPTService
                             outros procedimentos....
                         ],
                         "priority": "Nivel de 0 a 100 para ele ser atendido",
-                        "nivel_urgencia": "Nivel de urgencia [baixa, media, alta, emergencia",
+                        "nivel_urgencia": "Nivel de urgencia [baixo, media, alta, emergencia",
                         "idade": "Idade do paciente",
                         "name": "Nome Paciente",
                         "setor" : "Setor que o paciente tem que ser atendido",
@@ -140,7 +140,7 @@ class ChatGPTService
                             outros procedimentos....
                         ],
                         "priority": "Nivel de 0 a 100 para ele ser atendido",
-                        "nivel_urgencia": "Nivel de urgencia [baixa, media, alta, emergencia",
+                        "nivel_urgencia": "Nivel de urgencia [baixo, media, alta, emergencia",
                         "idade": "Idade do paciente",
                         "name": "Nome Paciente",
                         "setor" : "Setor que o paciente tem que ser atendido",
