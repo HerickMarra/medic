@@ -21,15 +21,7 @@ class AtendimentoController extends Controller
 
       $gpt = NEW ChatGPTService();
       $triagem = $gpt->preDiagnose($request);
-
       $tri = json_decode($triagem);
-
-      if($tri == null){
-          return response()->json([
-            'status' => false,
-            'message' => 'Não foi possível realizar a triagem'
-          ]);
-      }
   
       DB::beginTransaction();
       
