@@ -15,6 +15,13 @@
     {{-- <div class="x-select-function-desc" >
         <div class="x-select-function-desc-btn">Descrever sintomas (por texto)</div>
     </div> --}}
+
+
+    <div class="modal-triagem">
+        <div class="modal-triagem-area">
+            
+        </div>
+    </div>
 </div>
 
 
