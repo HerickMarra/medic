@@ -61,7 +61,7 @@ class ChatGPTService
                         ],
                         "priority": "Nivel de 0 a 100 para ele ser atendido",
                         "nivel_urgencia": "Nivel de urgencia [baixo, media, alta, emergencia",
-                        "idade": "Idade do paciente",
+                        "idade": "data de nascimento do",
                         "name": "Nome Paciente",
                         "setor" : "Setor que o paciente tem que ser atendido",
                         "observacoes_adicionais" : "obs..",
