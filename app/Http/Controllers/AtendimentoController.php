@@ -21,18 +21,17 @@ class AtendimentoController extends Controller
       $gpt = NEW ChatGPTService();
       $triagem = $gpt->preDiagnose($request);
       $tri = json_decode($triagem);
-  
+
       DB::beginTransaction();
       
       try {
           // Delegando a criação do usuário a um serviço dedicado
           $userService = new UserService();
           $user = $userService->triagemUser($tri);
-
+        
           // Adicionando o usuário à fila de atendimento
           $queueService = new QueueService();
           $fila = $queueService->store($user, $triagem);
-
           // Autenticando o usuário, se necessário
         //   if ($user && $fila) {
         //       Auth::login($user);
