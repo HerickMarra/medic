@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\DB;
 
 class AtendimentoController extends Controller
 {
-    public function realizarAtendimento($request){
+    public function realizarAtendimento(Request $request){
     //   $request = (object) [
     //     'symptoms' => ['Gripe', 'Dor de Cabeça'],
     //     'idade' => 23,
@@ -43,16 +43,16 @@ class AtendimentoController extends Controller
           $fila = $queueService->store($user, $triagem);
 
           // Autenticando o usuário, se necessário
-          if ($user && $fila) {
-              Auth::login($user);
-          }
+        //   if ($user && $fila) {
+        //       Auth::login($user);
+        //   }
 
           DB::commit();
 
           return response()->json(data: [
               'status' => true,
               'message' => 'Triagem finalizada',
-              'data' => $triagem,
+              'data' => json_decode($triagem),
           ]);
       } catch (\Exception $e) {
           DB::rollBack();

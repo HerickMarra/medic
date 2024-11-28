@@ -39,6 +39,34 @@
             <button onclick="triagem()" style="text-align: center; display: block; margin: 20px auto 0 auto;">Enviar</button>
         </div>  
     </div>
+
+
+    <div id="final" style="display: none;" class="modal-triagem">
+        <div class="modal-triagem-area">
+            <div class="carregamento">
+                <div class="spinner">
+                    <div class="spinnerin"></div>
+                </div>
+            </div>
+
+            <div style="display: none" class="resultado">
+                <p>Nivel de urgencia</p>
+                <div class="Bandeira"></div>
+
+
+                <div class="hospitais">
+                    <p>Mais proximo</p>
+                    <div class="hosp">Hospital de Base do Distrito Federal </div>
+                    <p>Recomendado</p>
+                    <div class="hosp">Hospital Brasília</div>
+                    <p>Mais vazio</p>
+                    <div class="hosp">Hospital Daher</div>
+                </div>
+
+
+            </div>
+        </div>  
+    </div>
 </div>
 
 
@@ -67,9 +95,13 @@
         }
         $('#descrever').css('display', 'none');
         $('#saibamais').css('display', 'flex');
+
+        $('.Bandeira').addClass($response.data.nivel_urgencia);
     }
 
     function triagem(){
+        $('#saibamais').css('display', 'none');
+        $('#final').css('display', 'flex');
         // URL da rota para onde a requisição será enviada
         var url = "/atendimento/realizar-atendimento";
 
@@ -84,7 +116,9 @@
 
         $.post(url, dataToSend, function(response) {
             // Manipule a resposta da API aqui
-            console.log("Resposta do servidor:", response);
+            $('.carregamento').css('display', 'none');
+            $('.resultado').css('display', 'flex');
+
         }).fail(function(xhr, status, error) {
             // Tratamento de erro
             console.error("Erro na requisição:", error);

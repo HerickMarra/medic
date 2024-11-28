@@ -68,7 +68,7 @@ class ChatGPTService
                     }
                         
                     ]'],
-                ["role" => "user", "content" => "Sintomas: " . implode(', ', $request->symptoms)],
+                ["role" => "user", "content" => "Sintomas: " . $request->symptoms],
                 ["role" => "user", "content" => "Idade: " . $request->idade],
                 ["role" => "user", "content" => "Genero: " . $request->genero],
                 ["role" => "user", "content" => "Nome: " . $request->nome],
