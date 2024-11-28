@@ -54,4 +54,7 @@ class AtendimentoController extends Controller
           ]);
       }
     }
+
+
+   
 }
