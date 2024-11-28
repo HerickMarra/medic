@@ -195,8 +195,35 @@ body{
 }
 
 .modal-triagem-area{
-    width: 90%;
+    width: 95%;
     background-color: #fff;
     min-height: 200px;
     border-radius: 15px;
+    padding-bottom: 20px;
+}
+
+.modal-triagem-area-sintomas{
+    height: 100px;
+    width: 90%;
+    background-color: red;
+    display: block;
+    margin: 10px auto;
+}
+
+
+.modal-triagem-area .title{
+    text-align: center;
+    font-weight: 500;
+    padding: 0 20px;
+}
+
+.modal-triagem-area-textarea{
+    margin: 0 auto;
+    display: block;
+}
+
+
+.layout-input{
+    border: 1px solid rgb(139, 139, 139);
+    margin-top: 17px;
 }

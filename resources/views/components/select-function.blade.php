@@ -17,11 +17,26 @@
     </div> --}}
 
 
-    <div class="modal-triagem">
+    {{-- <div class="modal-triagem">
         <div class="modal-triagem-area">
-            
-        </div>
-    </div>
+            <p class="title" style="margin-top: 20px;">Selecione os sintomas que vc está sentindo</p>
+
+            <div class="modal-triagem-area-sintomas">
+
+            </div>
+
+            <p class="title" style="margin-top: 20px;">Não achou oq procura? descreva!</p>
+
+            <textarea class="modal-triagem-area-textarea layout-input" name="" id="" cols="30" rows="10"></textarea>
+        </div>  
+    </div> --}}
+
+
+    {{-- <div class="modal-triagem">
+        <div class="modal-triagem-area">
+            <p class="title" style="margin-top: 20px;">Selecione os sintomas que vc está sentindo</p>
+        </div>  
+    </div> --}}
 </div>
 
 
