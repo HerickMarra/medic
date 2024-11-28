@@ -18,7 +18,6 @@ class AtendimentoController extends Controller
     //     'genero' => 'Homem',
     //     'nome' => 'Vitorio'
     // ];
-
       $gpt = NEW ChatGPTService();
       $triagem = $gpt->preDiagnose($request);
       $tri = json_decode($triagem);

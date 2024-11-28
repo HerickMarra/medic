@@ -52,10 +52,8 @@
             </div>
 
             <div style="display: none" class="resultado">
-                <div style="display:flex; flex-direction: row; align-items: center; justify-content:center; margin-bottom: 20px;">
                     <p style="margin-right:4px; font-size: 20px !important; font-weight: bold">Nivel de urgencia</p>
-                    <div class="Bandeira"></div>
-                </div>
+                <div class="Bandeira"></div>
 
                 <p style="padding-left: 22px;
     margin-bottom: 4px;
@@ -66,13 +64,23 @@
 
                 <div class="hospitais">
                     <p>Mais próximo</p>
-                    <div class="hosp">Hospital de Base do Distrito Federal </div>
+                    <div class="hosp">Hospital de Base do DF 
+                    <a target="_blank" href="https://maps.app.goo.gl/ZKwHFUGZRQdXRP6y8"><img src="/images/google-maps.png" style="width:24px;  " alt=""></a>
+
+                    </div>
 
                     <p>Recomendado</p>
-                    <div class="hosp">Hospital Brasília</div>
+                    <div class="hosp">Hospital Brasília
+                    <a target="_blank" href="https://maps.app.goo.gl/BUYDH1Mgheb8AJEP7"><img src="/images/google-maps.png" style="width:24px; " alt=""></a>
+
+                    </div>
 
                     <p>Mais vazio</p>
-                    <div class="hosp">Hospital Daher</div>
+                    <div class="hosp">Hospital Daher
+                    <a target="_blank" href="https://maps.app.goo.gl/86jreqmrD5zvyL6z6"><img src="/images/google-maps.png" style="width:24px; " alt=""></a>
+
+                    </div>
+
                 </div>
 
                 <a href="/user" style="    padding: 6px;

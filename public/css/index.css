@@ -311,11 +311,7 @@ body{
   }
 
 
-  .Bandeira{
-    width: 16px;
-    height: 16px;
-    border-radius: 100%;
-}
+ 
 
 .resultado{
     display: flex;
@@ -340,11 +336,41 @@ body{
 .hosp{
     width: 80%;
     background-color: #fff;
-    filter: drop-shadow(1px 1px 10px  rgba(0, 0, 0, 0.178));
     margin: 5px 0;
-    margin-bottom: 12px !important;
+    margin-bottom: 4px !important;
     padding: 10px;
     border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+
+@keyframes pulsar {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1); /* Expande o elemento */
+        opacity: 0.8; /* Reduz a opacidade */
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.Bandeira{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-top: 4px;
+    margin-bottom: 20px;
+    align-self: center;
+    animation: pulsar 1.5s infinite;
+}
+
+.baixa {
+    background: green;
 }
 
 .baixo {
