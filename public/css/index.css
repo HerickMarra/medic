@@ -205,9 +205,16 @@ body{
 .modal-triagem-area-sintomas{
     height: 100px;
     width: 90%;
-    background-color: red;
-    display: block;
+    display: flex;
     margin: 10px auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.modal-triagem-area-sintomas div{
+    margin: 5px;
+    font-size: 13px;
+    font-weight: 300;
 }
 
 
