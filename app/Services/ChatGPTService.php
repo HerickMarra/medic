@@ -20,7 +20,7 @@ class ChatGPTService
     /**
      * Função para enviar uma requisição ao ChatGPT para pré-diagnóstico com sintomas.
      */
-    public function preDiagnose(array $symptoms, $idade, $genero,$nome)
+    public function preDiagnose($request)
     {
         // Dados para enviar ao ChatGPT
         $data = [
@@ -68,10 +68,10 @@ class ChatGPTService
                     }
                         
                     ]'],
-                ["role" => "user", "content" => "Sintomas: " . implode(', ', $symptoms)],
-                ["role" => "user", "content" => "Idade: " . $idade],
-                ["role" => "user", "content" => "Genero: " . $genero],
-                ["role" => "user", "content" => "Nome: " . $nome],
+                ["role" => "user", "content" => "Sintomas: " . implode(', ', $request->symptoms)],
+                ["role" => "user", "content" => "Idade: " . $request->idade],
+                ["role" => "user", "content" => "Genero: " . $request->genero],
+                ["role" => "user", "content" => "Nome: " . $request->nome],
             ],
             'temperature' => 0.7,
             'max_tokens' => 1000
