@@ -5,7 +5,7 @@
     <x-pergunte-med-ia />
 
     <section class="x-select-function-area">
-        <div class="x-select-function-banner-triagem"></div>
+        <div onclick="inicio()" class="x-select-function-banner-triagem"></div>
         <div class="x-select-function-banner-sintomas"></div>
     </section>
 
@@ -17,40 +17,77 @@
     </div> --}}
 
 
-    <div class="modal-triagem">
+    <div id="descrever" style="display: none;" class="modal-triagem">
         <div class="modal-triagem-area">
-            <p class="title" style="margin-top: 20px;">Selecione os sintomas que vc está sentindo</p>
+            <p class="title" style="margin-top: 20px;">Descreva o sintomas que você está sentindo</p>
 
-            <div class="modal-triagem-area-sintomas">
-                <div>Dor de cabeça</div>
-                <div>febre</div>
-                <div>enjoo</div>
-                <div>Dor nas costas</div>
-                <div>fadiga</div>
-            </div>
+            <textarea class="modal-triagem-area-textarea layout-input" name="" id="escricc" cols="30" rows="10"></textarea>
 
-            <p class="title" style="margin-top: 20px;">Não achou oq procura? descreva!</p>
 
-            <textarea class="modal-triagem-area-textarea layout-input" name="" id="" cols="30" rows="10"></textarea>
+            <button class="modal-triagem-area-enviar" onclick="preTriagem()">Enviar</button>
         </div>  
     </div>
 
 
-    {{-- <div class="modal-triagem">
+    <div id="saibamais" style="display: none;" class="modal-triagem">
         <div class="modal-triagem-area">
             <p class="title" style="margin-top: 20px;">Selecione os sintomas que vc está sentindo</p>
+            <label style="text-align: center; display: block; margin: 25px auto 5px auto;" for="">Qual seu nome:</label>
+            <input class="layout-input" type="text" name="" id="nomep"><br>
+            <label style="text-align: center; display: block; margin: 5px auto;" for="">Qual sua idade:</label>
+            <input class="layout-input" type="date" name="" id="idadeP">
+            <button onclick="triagem()" style="text-align: center; display: block; margin: 20px auto 0 auto;">Enviar</button>
         </div>  
-    </div> --}}
+    </div>
 </div>
 
 
 <script>
     
-    $('#x-select-function').css('top', $(window).height() - 10);
+    $('#x-select-function').css('top', $(window).height() + 300);
 
 
     function SelectAtendimento(){
         $('#x-select-function').css('top', '0px');
         $('.x-select-function-desc').css('display', 'flex')
+    }
+
+    function inicio(){
+        $('#descrever').css('display', 'flex');
+    }
+
+    function preTriagem(){
+        let text = $('#escricc').val();
+
+
+        if (!text || text.trim() === "") {
+            $('#escricc').css('border', '2px solid red');
+        } else {
+            $('#escricc').css('border', '1px solid black');
+        }
+        $('#descrever').css('display', 'none');
+        $('#saibamais').css('display', 'flex');
+    }
+
+    function triagem(){
+        // URL da rota para onde a requisição será enviada
+        var url = "/atendimento/realizar-atendimento";
+
+        // Dados que você deseja enviar para a API
+        var dataToSend = {
+            _token: '{{csrf_token()}}',
+            symptoms: $('#escricc').val(),
+            nome: $('#nomep').val(),
+            genero: 'Não informado',
+            idade: $('#idadeP').val(),
+        };
+
+        $.post(url, dataToSend, function(response) {
+            // Manipule a resposta da API aqui
+            console.log("Resposta do servidor:", response);
+        }).fail(function(xhr, status, error) {
+            // Tratamento de erro
+            console.error("Erro na requisição:", error);
+        });
     }
 </script>

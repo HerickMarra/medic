@@ -7,7 +7,6 @@
 
     font-family: "Inter", sans-serif;
         font-optical-sizing: auto;
-        font-weight: 900;
         font-style: normal;
 }
 
@@ -212,9 +211,14 @@ body{
 }
 
 .modal-triagem-area-sintomas div{
-    margin: 5px;
-    font-size: 13px;
-    font-weight: 300;
+    margin: 2px;
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid rgb(104, 11, 99);
+    color: #592589;
+    height: 17px;
+    padding: 2px;
+    border-radius: 5px;
 }
 
 
@@ -227,10 +231,22 @@ body{
 .modal-triagem-area-textarea{
     margin: 0 auto;
     display: block;
+    font-weight: 200;
 }
 
 
 .layout-input{
     border: 1px solid rgb(139, 139, 139);
     margin-top: 17px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 1px;
+    padding: 5px;
+}
+
+
+.modal-triagem-area-enviar{
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
 }

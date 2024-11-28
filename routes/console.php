@@ -14,16 +14,16 @@ use Illuminate\Support\Facades\Artisan;
 
 Artisan::command('inspire', function () {
 
-    $gpt = NEW ChatGPTService();
+    $gpt = new ChatGPTService();
     $triagem = $gpt->preDiagnose(
-        ['Gripe', 'Dor de Cabeça'], 
-        23 ,
-        "Homem",
-        "Vitorio");
+        ['palpebra caida', 'Acima do peso', ], 
+        49 ,
+        "mulher",
+        "Valéria");
         
-
+    
     $tri = json_decode($triagem);
-
+        dd($tri);
     if($tri == null){
         // dd($triagem);
     }
