@@ -11,7 +11,6 @@
 <body>
     <x-area-mobile>
 
-
         <x-layout.banner-inicial />
         <x-select-function />
     </x-area-mobile>

@@ -12,7 +12,7 @@ class QueueController extends Controller
   public function index()
   {
       $queues = $this->orderQueues(); // Recupera todos os registros da tabela 'queues'
-      return response()->json($queues);
+      return view('queue.index', compact('queues'));
   }
 
   // Exibe um registro específico da fila
@@ -71,7 +71,7 @@ class QueueController extends Controller
   
   public function orderQueues()
   {
-    $this->adjustPriority();
+    // $this->adjustPriority();
 
     $queues = Queue::where('status', 'waiting') // Filtra apenas os pacientes em espera
     ->orderByDesc('priority') // Ordena pela prioridade (em ordem decrescente, ou seja, maior prioridade primeiro)

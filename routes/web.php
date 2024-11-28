@@ -23,6 +23,7 @@ Route::prefix('fila')->group(function() {
     Route::get('/', [QueueController::class, 'index']);
     Route::post('/store', [QueueController::class, 'store']);
     Route::post('/update-status', [QueueController::class, 'updateStatus']);
+    Route::get('/order-queue', [QueueController::class, 'orderQueues']);
 });
 
 Route::prefix('atendimento')->group(function() {
