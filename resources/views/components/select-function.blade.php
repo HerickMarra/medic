@@ -50,15 +50,19 @@
             </div>
 
             <div style="display: none" class="resultado">
-                <p>Nivel de urgencia</p>
-                <div class="Bandeira"></div>
+                <div style="display:flex; flex-direction: row;">
+                    <p style="margin-right:4px; font-size: 20px !important; margin-bottom: 20px; font-weight: bold">Nivel de urgencia</p>
+                    <div class="Bandeira"></div>
+                </div>
 
 
                 <div class="hospitais">
                     <p>Mais proximo</p>
                     <div class="hosp">Hospital de Base do Distrito Federal </div>
+
                     <p>Recomendado</p>
                     <div class="hosp">Hospital Brasília</div>
+
                     <p>Mais vazio</p>
                     <div class="hosp">Hospital Daher</div>
                 </div>

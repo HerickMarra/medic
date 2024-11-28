@@ -312,14 +312,16 @@ body{
 
 
   .Bandeira{
-    width: 100px;
-    height: 100px;
-    background-color: red;;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background-color: red;
 }
 
 .resultado{
     display: flex;
     flex-direction: column;
+    padding: 12px;
 }
 
 .hospitais{
