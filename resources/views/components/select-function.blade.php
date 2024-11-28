@@ -19,7 +19,7 @@
 
     <div id="descrever" style="display: none;" class="modal-triagem">
         <div class="modal-triagem-area">
-            <p class="title" style="margin-top: 20px;">Descreva o sintomas que você está sentindo</p>
+            <p class="title" style="margin-top: 20px;">Descreva os sintomas que você está apresentando.</p>
 
             <textarea class="modal-triagem-area-textarea layout-input" name="" id="escricc" cols="30" rows="10"></textarea>
 
@@ -31,10 +31,10 @@
 
     <div id="saibamais" style="display: none;" class="modal-triagem">
         <div class="modal-triagem-area">
-            <p class="title" style="margin-top: 20px;">Selecione os sintomas que vc está sentindo</p>
-            <label style="text-align: center; display: block; margin: 25px auto 5px auto;" for="">Qual seu nome:</label>
+            <p class="title" style="margin-top: 20px;">Por favor, forneça suas informações.</p>
+            <label style="text-align: center; display: block; margin: 25px auto 5px auto;" for="">Nome completo:</label>
             <input class="layout-input" type="text" name="" id="nomep"><br>
-            <label style="text-align: center; display: block; margin: 5px auto;" for="">Qual sua idade:</label>
+            <label style="text-align: center; display: block; margin: 5px auto;" for="">Idade:</label>
             <input class="layout-input" type="date" name="" id="idadeP">
             <button onclick="triagem()" style="text-align: center; display: block; margin: 20px auto 0 auto;">Enviar</button>
         </div>  
