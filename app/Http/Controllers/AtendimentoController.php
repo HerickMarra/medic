@@ -42,10 +42,10 @@ class AtendimentoController extends Controller
 
           DB::commit();
 
-          return response()->json([
+          return response()->json(data: [
               'status' => true,
               'message' => 'Triagem finalizada',
-              'data' => $fila,
+              'data' => $triagem,
           ]);
       } catch (\Exception $e) {
           DB::rollBack();
