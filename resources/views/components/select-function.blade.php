@@ -21,7 +21,7 @@
         <div class="modal-triagem-area">
             <p class="title" style="margin-top: 20px;">Descreva os sintomas que você está apresentando.</p>
 
-            <textarea class="modal-triagem-area-textarea layout-input" name="" id="escricc" cols="30" rows="10"></textarea>
+            <textarea class="modal-triagem-area-textarea layout-input" name="" id="escricc" cols="34" rows="5"></textarea>
 
 
             <button class="modal-triagem-area-enviar" onclick="preTriagem()">Enviar</button>
@@ -34,7 +34,7 @@
             <p class="title" style="margin-top: 20px;">Por favor, forneça suas informações.</p>
             <label style="text-align: center; display: block; margin: 25px auto 5px auto;" for="">Nome completo:</label>
             <input class="layout-input" type="text" name="" id="nomep"><br>
-            <label style="text-align: center; display: block; margin: 5px auto;" for="">Idade:</label>
+            <label style="text-align: center; display: block; margin: 5px auto;" for="">Data de nascimento:</label>
             <input class="layout-input" type="date" name="" id="idadeP">
             <button onclick="triagem()" style="text-align: center; display: block; margin: 20px auto 0 auto;">Enviar</button>
         </div>  

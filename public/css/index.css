@@ -232,6 +232,8 @@ body{
     margin: 0 auto;
     display: block;
     font-weight: 200;
+    margin-top: 10px !important;
+    
 }
 
 
@@ -245,12 +247,27 @@ body{
 }
 
 
-.modal-triagem-area-enviar{
+.modal-triagem-area-enviar, #saibamais button{
     margin: 0 auto;
     display: block;
     margin-top: 10px;
+    padding: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    border: none;
+    color: white;
+    background-color: #B34053;
+    border-radius: 4px;
 }
 
+#saibamais input {
+    border-radius: 4px;
+    padding: 6px;
+}
+
+#saibamais label {
+
+}
 
 
 
@@ -320,3 +337,4 @@ body{
     padding: 10px;
     border-radius: 20px;
 }
+
