@@ -11,7 +11,14 @@ use Illuminate\Support\Facades\DB;
 
 class AtendimentoController extends Controller
 {
-    public function realizarAtedimento($request){
+    public function realizarAtendimento($request){
+    //   $request = (object) [
+    //     'symptoms' => ['Gripe', 'Dor de Cabeça'],
+    //     'idade' => 23,
+    //     'genero' => 'Homem',
+    //     'nome' => 'Vitorio'
+    // ];
+
       $gpt = NEW ChatGPTService();
       $triagem = $gpt->preDiagnose($request);
 
