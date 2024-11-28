@@ -120,7 +120,7 @@ body{
 
 .x-select-function-banner{
     background-image: url(/images/med-card.png);
-    width: 90%;
+    width: 95%;
     height: 200px;
     display: block;
     background-position: center;
@@ -158,5 +158,24 @@ body{
 
 .x-select-function-area{
     display: flex;
-    margin-top: 50px;
+    margin-top: 20px;
 }
+
+
+.pergunte-med-ia{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.pergunte-med-ia input{
+    background-color: #ececec;
+    border: none;
+    padding: 17px 20px;
+    border-radius: 15px;
+    font-weight: 200;
+    width: 90%;
+    margin-top: 10px;
+}
+

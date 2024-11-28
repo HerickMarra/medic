@@ -1,7 +1,9 @@
 <div class="x-select-function" id="x-select-function">
       
-    <div class="x-select-function-banner">
-    </div>
+    <div class="x-select-function-banner"></div>
+
+    <x-pergunte-med-ia />
+
     <section class="x-select-function-area">
         <div class="x-select-function-banner-triagem"></div>
         <div class="x-select-function-banner-sintomas"></div>
