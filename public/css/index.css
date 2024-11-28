@@ -315,13 +315,13 @@ body{
     width: 16px;
     height: 16px;
     border-radius: 100%;
-    background-color: red;
 }
 
 .resultado{
     display: flex;
     flex-direction: column;
     padding: 12px;
+    text-align: center;
 }
 
 .hospitais{
@@ -329,6 +329,12 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+.hospitais p {
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .hosp{
@@ -336,7 +342,23 @@ body{
     background-color: #fff;
     filter: drop-shadow(1px 1px 10px  rgba(0, 0, 0, 0.178));
     margin: 5px 0;
+    margin-bottom: 12px !important;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 6px;
 }
 
+.baixo {
+    background: green;
+}
+
+.media {
+    background: blue;
+}
+
+.alta {
+    background: yellow;
+}
+
+.Emergência {
+    background: red;
+}

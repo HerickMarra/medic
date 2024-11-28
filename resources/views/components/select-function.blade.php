@@ -50,14 +50,20 @@
             </div>
 
             <div style="display: none" class="resultado">
-                <div style="display:flex; flex-direction: row;">
-                    <p style="margin-right:4px; font-size: 20px !important; margin-bottom: 20px; font-weight: bold">Nivel de urgencia</p>
+                <div style="display:flex; flex-direction: row; align-items: center; justify-content:center; margin-bottom: 20px;">
+                    <p style="margin-right:4px; font-size: 20px !important; font-weight: bold">Nivel de urgencia</p>
                     <div class="Bandeira"></div>
                 </div>
 
+                <p style="padding-left: 22px;
+    margin-bottom: 4px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: start;">Pré-Medidas</p>
+                <p class="recomendacoes" style="margin-bottom: 14px; padding-left: 22px; text-align: start;"></p>
 
                 <div class="hospitais">
-                    <p>Mais proximo</p>
+                    <p>Mais próximo</p>
                     <div class="hosp">Hospital de Base do Distrito Federal </div>
 
                     <p>Recomendado</p>
@@ -66,6 +72,14 @@
                     <p>Mais vazio</p>
                     <div class="hosp">Hospital Daher</div>
                 </div>
+
+                <a href="/user" style="    padding: 6px;
+    font-weight: 700;
+    width: 90px;
+    border: 1px solid #e6e3e3;
+    align-self: center;
+    color: black;
+    text-decoration: none;">Voltar</a>
 
 
             </div>
@@ -88,9 +102,8 @@
         $('#descrever').css('display', 'flex');
     }
 
-    function preTriagem(){
+    function preTriagem(response){
         let text = $('#escricc').val();
-
 
         if (!text || text.trim() === "") {
             $('#escricc').css('border', '2px solid red');
@@ -100,7 +113,7 @@
         $('#descrever').css('display', 'none');
         $('#saibamais').css('display', 'flex');
 
-        $('.Bandeira').addClass($response.data.nivel_urgencia);
+        $('.Bandeira').addClass(response.data.nivel_urgencia);
     }
 
     function triagem(){
@@ -120,6 +133,18 @@
 
         $.post(url, dataToSend, function(response) {
             // Manipule a resposta da API aqui
+            console.log(response);
+            preTriagem(response);
+            
+            var listaRecomendacoes = document.querySelector('.recomendacoes');
+
+            // Loop para criar um item da lista para cada recomendação
+            response.data.pre_medidas.forEach(function(medida) {
+                var item = document.createElement('li'); // Cria um novo item da lista <li>
+                item.textContent = medida; // Define o texto do item como a recomendação
+                listaRecomendacoes.appendChild(item); // Adiciona o item à lista
+            });
+
             $('.carregamento').css('display', 'none');
             $('.resultado').css('display', 'flex');
 
