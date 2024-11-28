@@ -29,12 +29,6 @@
     </div>
 
 
-    <div id="descrever"  class="modal-triagem">
-        <div class="modal-triagem-area">
-            <input type="file" id="imagemMedicamento" name="imagem" accept="image/*" />
-            <button class="modal-triagem-area-enviar" onclick="preTriagem()">Enviar</button>
-        </div>  
-    </div>
 
 
     <div id="saibamais" style="display: none;" class="modal-triagem">
