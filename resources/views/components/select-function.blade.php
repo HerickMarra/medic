@@ -29,6 +29,14 @@
     </div>
 
 
+    <div id="descrever"  class="modal-triagem">
+        <div class="modal-triagem-area">
+            <input type="file" id="imagemMedicamento" name="imagem" accept="image/*" />
+            <button class="modal-triagem-area-enviar" onclick="preTriagem()">Enviar</button>
+        </div>  
+    </div>
+
+
     <div id="saibamais" style="display: none;" class="modal-triagem">
         <div class="modal-triagem-area">
             <p class="title" style="margin-top: 20px;">Por favor, forneça suas informações.</p>
@@ -72,6 +80,8 @@
         </div>  
     </div>
 </div>
+
+
 
 
 <script>
@@ -127,5 +137,17 @@
             // Tratamento de erro
             console.error("Erro na requisição:", error);
         });
+    }
+
+
+    function leituraImagem(){
+
+        const input = document.getElementById('imagemMedicamento');
+        const file = input.files[0];
+
+        if (file && !file.type.startsWith('image/')) {
+            alert('Por favor, envie apenas imagens.');
+            e.preventDefault();  // Impede o envio do formulário
+        }
     }
 </script>
